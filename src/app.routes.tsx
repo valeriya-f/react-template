@@ -25,14 +25,11 @@ const UsersPage = React.lazy(() => import("app/users"));
 const AppRoutes = () => {
   return (
     <Routes>
-      {/* PUBLIC */}
-      {/* <Route path={"/home"} element={<PublicRoute element={HomePage} />} /> */}
-
       {/* PRIVATE */}
-      <Route path={"/users"} element={<PrivateRoute element={UsersPage} />} />
+      <Route path={"/users/*"} element={<PrivateRoute element={UsersPage} />} />
 
       {/* DEFAULT */}
-      <Route path='*' element={<Navigate to="/home" />} />
+      <Route path='*' element={<Navigate to="/users" />} />
     </Routes>
   );
 };

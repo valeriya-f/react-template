@@ -19,9 +19,9 @@ const usersSlice = createSlice({
   name: 'users',
   initialState,
   reducers: {},
-  extraReducers: (builder) => {
-    builder;
-  },
+  // extraReducers: (builder) => {
+  //   builder;
+  // },
 });
 
 export const { } = usersSlice.actions;
