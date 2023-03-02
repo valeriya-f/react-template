@@ -2,6 +2,7 @@ import { Action, AsyncThunkAction, createAsyncThunk } from "@reduxjs/toolkit";
 
 import { UserDto } from "app/users/types/user-dto.type";
 import repository from "repository";
+import { usersSlice } from "./users.slice";
 
 export const getUsers = createAsyncThunk<UserDto[]>("GET/users", async (_, { rejectWithValue }) => {
   try {
@@ -20,3 +21,5 @@ export const getUser = createAsyncThunk<UserDto, { userId: string }>("GET/users/
     return rejectWithValue(error);
   }
 });
+
+export const { } = usersSlice.actions;
